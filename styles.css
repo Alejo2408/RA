@@ -544,4 +544,50 @@ h1, h2, h3 {
 .product-card p {
     font-size: 14px;
     line-height: 1.5;
+
+}
+
+/* Media Query para pantallas pequeñas, como celulares */
+@media (max-width: 768px) {
+    /* Ajustes para el menú de navegación */
+    .nav {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        text-align: center;
+    }
+    .nav-links {
+        margin-top: 10px;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+        justify-content: center;
+    }
+
+    /* Ajustes para la sección principal (hero) */
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    /* Ajustes para la cuadrícula del portafolio */
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Muestra solo un elemento por fila */
+    }
+
+    /* Ajustes para la sección de clientes */
+    .client-logos {
+        flex-direction: column; /* Apila los logos uno sobre otro */
+        gap: 20px;
+    }
+
+    .client-logos img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Ajustes para el footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Oculta los elementos que no se necesitan en móvil si es necesario */
+    .some-element-to-hide {
+        display: none;
+    }
 }
