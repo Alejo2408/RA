@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('modal-title');
     const modalDescription = document.getElementById('modal-description');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    // CÓDIGO NUEVO PARA EL MENÚ DE HAMBURGUESA
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
 
     portfolioItems.forEach(item => {
         item.addEventListener('click', () => {
