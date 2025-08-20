@@ -594,3 +594,49 @@ h1, h2, h3 {
         display: none;
     }
 }
+
+/* Estilos del botón del menú de hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto en escritorios */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--color-dark-blue);
+    cursor: pointer;
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row; /* Mantén el logo y el botón en la misma fila */
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-links {
+        display: none; /* Oculta los enlaces por defecto en móviles */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Colócalo debajo del header */
+        left: 0;
+        background-color: var(--color-white);
+        box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        z-index: 99;
+    }
+
+    .nav-links.active {
+        display: flex; /* Muestra los enlaces cuando la clase "active" esté presente */
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón de hamburguesa en móviles */
+    }
+}
+
